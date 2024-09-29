@@ -1,8 +1,9 @@
 //your JS code here. If required.
-const number=document.getElementById("ip").value
+
 const output=document.getElementById("output")
 const button=document.getElementById("btn")
 button.addEventListener('click',()=>{
+	const number=document.getElementById("ip").value
 	let promise=new Promise(function(resolve,reject) {
 	setTimeout(()=>{
 		resolve(number)
