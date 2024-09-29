@@ -1,5 +1,4 @@
 //your JS code here. If required.
-
 const output=document.getElementById("output")
 const button=document.getElementById("btn")
 button.addEventListener('click',()=>{
