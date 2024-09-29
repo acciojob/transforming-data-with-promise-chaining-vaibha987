@@ -10,7 +10,7 @@ button.addEventListener('click',()=>{
 	})
 	promise.then((number)=>{
 		output.innerHTML=`Result:${number}`
-		resolve(number)
+		return number
 	}).then((number)=>{
 		return new Promise((resolve, reject) => {
 		setTimeout(() => {
