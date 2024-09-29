@@ -44,5 +44,7 @@ button.addEventListener('click',()=>{
 		resolve(number)
 			}, 1000);
 	})
-	})
+	}).then((number)=>{
+		output.innerHTML = `Final Result: ${number}`
+})
 })
