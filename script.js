@@ -10,31 +10,39 @@ button.addEventListener('click',()=>{
 	})
 	promise.then((number)=>{
 		output.innerHTML=`Result:${number}`
-		return number
+		resolve(number)
 	}).then((number)=>{
+		return new Promise((resolve, reject) => {
 		setTimeout(() => {
 		number=number*2
 		output.innerHTML=`Result:${number}`
-		return number
+		resolve(number)
 	  }, 1000);
+	});
 	}).then((number)=>{
+		return new Promise((resolve, reject) => {
 		setTimeout(() => {
 		number=number-3
 		output.innerHTML=`Result:${number}`
-		return number
+		resolve(number)
 		}, 1000);
 	})
+	})
 	.then((number)=>{
+		return new Promise((resolve, reject) => {
 		setTimeout(() => {
 		number=parseInt(number/2)
 		output.innerHTML=`Result:${number}`
-		return number
+		resolve(number)
 			}, 1000);
+		})
 	}).then((number)=>{
+	return new Promise((resolve, reject) => {
 		setTimeout(() => {
 		number=number+10
 		output.innerHTML=`Result:${number}`
-		return number
+		resolve(number)
 			}, 1000);
+	})
 	})
 })
